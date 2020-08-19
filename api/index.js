@@ -6,11 +6,7 @@ const cors = require("cors");
 // Create express instnace
 const app = express()
 
-app.all('/*', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-});
+app.use(cors({ origin: 'https://boequestrian.herokuapp.com/' })); 
 
 // Init body-parser options (inbuilt with express)
 app.use(express.json());
@@ -21,7 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 const users = require('./routes/users')
 
 // Use API Routes
-app.use(cors());
 app.use(users)
 
 // Export the server middleware
