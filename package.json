@@ -1,8 +1,8 @@
 {
   "name": "bo-equestrian",
   "version": "1.0.0",
-  "description": "My primo Nuxt.js project",
-  "author": "Aslam Doctor",
+  "description": "Projet Nuxt Auth / Tailwind css",
+  "author": "Camille Coutens",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",

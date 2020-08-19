@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <nav class="flex items-center justify-between text-xs mx-8">
+  <div class="h-full">
+    <nav class="flex items-center justify-between text-xs mx-8" style="height: 10%">
       <nuxt-link to="/" class="">
         <img class="bar_logo" src="~/assets/images/Logo-bo-equestrian.png" alt="logo" />
       </nuxt-link>
@@ -34,9 +34,8 @@
       </div>
     </nav>
 
-    <div class="">
       <Nuxt />
-    </div>
+    
   </div>
 </template>
 
@@ -56,8 +55,26 @@
   font-style: normal;
 }
 
-html {
+html, body {
   font-family: "Deja Vu";
+  height: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#__nuxt, #__layout {
+  height: 100%;
 }
 
 .bar_logo {

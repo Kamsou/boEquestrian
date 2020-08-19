@@ -1,13 +1,14 @@
 <template>
-  <div class="flex items-center justify-center">
+  <div class="md:flex items-center justify-center block" style="height: 90%">
+    <div class="md:flex max-w-5xl h-9 block">
     <!-- Image  -->
-    <div class="login_image_left w-1/2">
-      <img class="login_image" src="~/assets/images/image-form.jpg" alt="Foret" />
+    <div class="login_image_left md:w-1/2 w-full">
+      <img class="login_image w-full md:h-full object-cover" src="~/assets/images/image-form.jpg" alt="Foret" />
     </div>
 
     <!-- Formulaire  -->
-    <div class="w-1/2 p-8">
-      <h1 class="text-sm">Connexion</h1>
+    <div class="md:w-1/2 w-full p-8">
+      <h1 class="font-title text-log text-center">Connexion</h1>
 
       <div class="alert alert-success"
         v-if="$route.params.registered=='yes'">You have registered successfully</div>
@@ -20,7 +21,7 @@
 
             <div class="form-group my-3">
               <!-- <label for="">Email</label> -->
-              <input type="email" class="form-control border rounded py-2 px-4 outline-none"
+              <input type="email" class="form-control border rounded w-full py-2 px-4 outline-none"
                 :class="{ 'is-invalid': errors && errors.email }"
                 v-model="email"
                 placeholder="Email"
@@ -32,7 +33,7 @@
 
             <div class="form-group my-3">
               <!-- <label for="">Mot de passe</label> -->
-              <input type="password" class="form-control border rounded py-2 px-4 outline-none"
+              <input type="password" class="form-control border rounded w-full py-2 px-4 outline-none"
                 :class="{ 'is-invalid': errors && errors.password }"
                 v-model="password"
                 placeholder="Mot de passe">
@@ -43,16 +44,22 @@
 
             <div class="alert alert-danger"
               v-if="login_error">{{ login_error }}</div>
-
-            <input type="submit" value="Login" class="btn btn-primary mr-3 my-3">
+            <div class="text-center">
+            <!-- <input type="submit" value="Login" class="btn btn-primary mr-3 my-3"> -->
+              <button @click="submitForm" class="border rounded w-full py-2 border-blue-700 bg-blue-600 text-white mr-1">Se connecter</button>
             <!-- <nuxt-link to="/" class="btn btn-secondary mr-3">Fermer</nuxt-link> -->
-
-            <div class="my-3">
-              <p>Pas encore inscrit(e) ? j'y vais</p>
+            </div>
+            <div class="my-5 text-gray-500">
+              <p class="text-switch">Pas encore inscrit(e)?
+                <nuxt-link to="/user/register">
+                  <span class="text-blue-600 font-bold cursor-pointer">S'inscrire</span>
+                </nuxt-link> 
+              </p>
             </div>
           </form>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
