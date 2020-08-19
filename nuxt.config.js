@@ -56,13 +56,13 @@ module.exports = {
       local: {
         endpoints: {
           login: {
-            url: 'https://boequestrian.herokuapp.com/users/login',
+            url: '/api/users/login',
             method: 'post',
             propertyName: 'token'
           },
           logout: true,
           user: {
-            url: 'https://boequestrian.herokuapp.com/users/user',
+            url: '/api/users/user',
             method: 'get',
             propertyName: 'user'
           }
