@@ -1,5 +1,6 @@
 const express = require('express')
 const db = require('./db')
+const cors = require("cors");
 
 
 // Create express instnace
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 const users = require('./routes/users')
 
 // Use API Routes
+app.use(cors());
 app.use(users)
 
 // Export the server middleware
