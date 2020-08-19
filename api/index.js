@@ -6,7 +6,11 @@ const cors = require("cors");
 // Create express instnace
 const app = express()
 
-app.use(cors({ origin: 'https://boequestrian.herokuapp.com/' })); 
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
 
 // Init body-parser options (inbuilt with express)
 app.use(express.json());
