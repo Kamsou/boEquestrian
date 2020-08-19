@@ -5,30 +5,25 @@
         <img class="bar_logo" src="~/assets/images/Logo-bo-equestrian.png" alt="logo" />
       </nuxt-link>
 
-      <div class="flex space-x-4">
-        <ul class="">
-          <li class="">
-            <nuxt-link to="/" class="">Accueil</nuxt-link>
-          </li>
-        </ul>
+      <div class="flex items-center space-x-4">
 
-        <ul class="flex space-x-4"
+        <ul class="flex items-center space-x-4"
           v-if="!$auth.loggedIn">
           <li class="">
-            <nuxt-link to="/user/register" class="">Inscription</nuxt-link>
+            <nuxt-link to="/user/login" class="">Se connecter</nuxt-link>
           </li>
-          <li class="">
-            <nuxt-link to="/user/login" class="">Connexion</nuxt-link>
+          <li class="border rounded py-2 px-4 border-blue-700 bg-blue-600 text-white">
+            <nuxt-link to="/user/register" class="">S'inscrire</nuxt-link>
           </li>
         </ul>
 
-        <ul class=""
+        <ul class="flex items-center space-x-4"
           v-if="$auth.loggedIn">
           <li class="">
             <nuxt-link to="/user/my-account" class="">Mon compte</nuxt-link>
           </li>
           <li class="">
-            <nuxt-link to="/user/logout" class="" >Se déconnecter</nuxt-link>
+            <nuxt-link to="/user/logout" class="border rounded py-2 px-4 border-blue-700 text-blue-700" >Se déconnecter</nuxt-link>
           </li>
         </ul>
       </div>
