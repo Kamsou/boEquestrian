@@ -1,5 +1,8 @@
 # Nuxtjs / Nodejs (Express) / Module Nuxt Auth / Tailwind CSS
 
+Nuxt Auth : https://auth.nuxtjs.org/
+Tailwind CSS : https://tailwindcss.com/
+
 ## Build Setup
 
 ``` bash
