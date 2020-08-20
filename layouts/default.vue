@@ -1,6 +1,6 @@
 <template>
   <div class="h-full">
-    <nav class="flex items-center justify-between text-xs mx-8" style="height: 10%">
+    <nav class="flex items-center justify-between md:text-xs text-sm md:mx-8 mx-4" style="height: 10%">
       <nuxt-link to="/" class="">
         <img class="bar_logo" src="~/assets/images/Logo-bo-equestrian.png" alt="logo" />
       </nuxt-link>
@@ -74,6 +74,11 @@ html, body {
 
 .bar_logo {
   width: 13vw;
+}
+@media screen and (max-width: 768px) {
+  .bar_logo {
+    width: 36vw;
+  }
 }
 
 </style>

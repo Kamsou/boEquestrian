@@ -51,9 +51,9 @@ module.exports = {
     '@nuxtjs/auth',
   ],
 
-  server: {
-    port: process.env.PORT || 8000
-  },
+  // server: {
+  //   port: process.env.PORT || 8000
+  // },
 
   auth: {
     strategies: {
@@ -87,7 +87,7 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000/api'
+    baseURL: process.env.BASE_URL || 'http://localhost:3000'
   },
   /*
   ** Build configuration
