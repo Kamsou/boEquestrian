@@ -24,6 +24,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           # Stage the file, commit and push
+          git fetch
           git checkout staging
+          git fetch
           git reset --hard origin/master
           git push -f origin staging
