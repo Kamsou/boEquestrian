@@ -66,6 +66,7 @@ html, body {
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 #__nuxt, #__layout {
