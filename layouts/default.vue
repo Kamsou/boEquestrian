@@ -69,6 +69,7 @@ html, body {
   padding: 0;
   //Ohyeah
   //yi
+  //ya
 }
 
 #__nuxt, #__layout {
