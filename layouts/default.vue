@@ -81,6 +81,7 @@ html, body {
   // FIX YA
   //TOTO
   //NEW BRANCH
+  //A LA MANO
 }
 
 #__nuxt, #__layout {
