@@ -1,9 +1,12 @@
-name: Merge main & staging in same time
+name: Push force on staging in same time that main
 
 on:
   push:
-    branches: [ main ]
-    
+    branches:
+      - master
+  pull_request_target:
+    types: [ closed ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
