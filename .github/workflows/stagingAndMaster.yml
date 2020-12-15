@@ -2,9 +2,8 @@ name: Merge main & staging in same time
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
+    branches: [ main ]
+  pull_request_target:
     types: [ closed ]
     
 jobs:
