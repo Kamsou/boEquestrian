@@ -25,6 +25,5 @@ jobs:
         run: |
           git fetch
           git checkout staging
-          git fetch
           git reset --hard origin/master
           git push -f origin staging
