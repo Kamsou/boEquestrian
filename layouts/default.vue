@@ -77,6 +77,7 @@ html, body {
   //IF
   //OKEYYY
   //MASTER
+  //TOTO
 }
 
 #__nuxt, #__layout {
