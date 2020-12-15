@@ -1,8 +1,12 @@
 name: Merge main & staging in same time
 
 on:
-  pull_request_target:
-      types: [ closed ]
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [ closed ]
+    
 jobs:
   build:
     runs-on: ubuntu-latest
