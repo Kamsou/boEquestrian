@@ -72,6 +72,7 @@ html, body {
   //ya
   //In the sky
   //Ahah
+  //JUL
 }
 
 #__nuxt, #__layout {
