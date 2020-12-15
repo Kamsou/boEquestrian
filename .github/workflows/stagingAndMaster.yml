@@ -1,9 +1,6 @@
 name: Push force on staging in same time that main
 
 on:
-  push:
-    branches:
-      - master
   pull_request_target:
     types: [ closed ]
 
